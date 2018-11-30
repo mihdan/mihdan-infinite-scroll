@@ -3,7 +3,7 @@
  * Plugin Name: Mihdan: Infinite Scroll
  * Plugin URI: https://github.com/mihdan/mihdan-infinite-scroll
  * Description: Бесконечный скролл для одиночных постов
- * Version: 1.0.22
+ * Version: 1.1
  * Author: Mikhail Kobzarev
  * Author URI: https://www.kobzarev.com/
  * GitHub Plugin URI: https://github.com/mihdan/mihdan-infinite-scroll
