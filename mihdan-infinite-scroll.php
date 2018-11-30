@@ -3,13 +3,13 @@
  * Plugin Name: Mihdan: Infinite Scroll
  * Plugin URI: https://github.com/mihdan/mihdan-infinite-scroll
  * Description: Бесконечный скролл для одиночных постов
- * Version: 1.0.21
+ * Version: 1.0.22
  * Author: Mikhail Kobzarev
  * Author URI: https://www.kobzarev.com/
  * GitHub Plugin URI: https://github.com/mihdan/mihdan-infinite-scroll
  */
 
-namespace Mihdan\Infinite\Scroll;
+namespace Mihdan_Infinite_Scroll;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -82,7 +82,6 @@ class Core {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_filter( 'the_content', array( $this, 'add_prev_next_link' ) );
 		add_filter( 'previous_post_link', array( $this, 'previous_post_link' ) );
-		//add_filter( 'next_post_link', array( $this, 'next_post_link' ) );
 	}
 
 	/**
@@ -127,7 +126,6 @@ class Core {
 		if ( is_single() ) {
 
 			$content .= get_previous_post_link( '%link' );
-			//$content .= get_next_post_link();
 		}
 
 		return $content;
@@ -143,20 +141,6 @@ class Core {
 	public function previous_post_link( $link ) {
 
 		$link = str_replace( 'rel="prev"', 'rel="prev" style="display: none" class="' . self::SLUG . '_previous_post_link"', $link );
-
-		return $link;
-	}
-
-	/**
-	 * Добавить класс для ссылки на следующий пост
-	 *
-	 * @param string $link html ссылка
-	 *
-	 * @return string
-	 */
-	public function next_post_link( $link ) {
-
-		$link = str_replace( 'rel="next"', 'rel="prev" class="next_post_link"', $link );
 
 		return $link;
 	}
