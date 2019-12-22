@@ -9,7 +9,7 @@
  * GitHub Plugin URI: https://github.com/mihdan/mihdan-infinite-scroll
  */
 
-namespace Mihdan_Infinite_Scroll;
+namespace Mihdan\Infinite_Scroll;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -92,16 +92,19 @@ class Core {
 		$suffix = ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ? '' : '.min';
 
 		// Настройки для JS
-		$config = apply_filters( self::SLUG . '_config', array(
-			'container'       => '.articles',
-			'append'          => '.article',
-			'history'         => 'push',
-			'historyTitle'    => true,
-			'next'            => '.' . self::SLUG . '_previous_post_link',
-			'debug'           => false,
-			'scrollThreshold' => 200,
-			'status'          => '.' . self::SLUG . '_status',
-		) );
+		$config = apply_filters(
+			self::SLUG . '_config',
+			array(
+				'container'       => '.articles',
+				'append'          => '.article',
+				'history'         => 'push',
+				'historyTitle'    => true,
+				'next'            => '.' . self::SLUG . '_previous_post_link',
+				'debug'           => false,
+				'scrollThreshold' => 200,
+				'status'          => '.' . self::SLUG . '_status',
+			)
+		);
 
 		wp_register_script( self::SLUG, self::$dir_uri . 'assets/js/infinite-scroll.pkgd' . $suffix . '.js', array(), null, true );
 		wp_register_script( self::SLUG . '_app', self::$dir_uri . 'assets/js/app.js', array( self::SLUG ), null, true );
@@ -146,7 +149,10 @@ class Core {
 	}
 }
 
-add_action( 'init', function () {
-	return Core::get_instance();
-} );
+add_action(
+	'init',
+	function () {
+		return Core::get_instance();
+	}
+);
 // eof;

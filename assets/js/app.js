@@ -13,16 +13,16 @@
 	update_next_url( document );
 
 	$( config.container ).after( ' ' +
-		'<div class="mihdan_infinite_scroll_status">\n' +
-		'  <div class="loader-ellips infinite-scroll-request">\n' +
-		'    <span class="loader-ellips__dot"></span>\n' +
-		'    <span class="loader-ellips__dot"></span>\n' +
-		'    <span class="loader-ellips__dot"></span>\n' +
-		'    <span class="loader-ellips__dot"></span>\n' +
-		'  </div>\n' +
-		//'  <p class="infinite-scroll-last">End of content</p>\n' +
-		'  <p class="infinite-scroll-error">Больше нет страниц для загрузки</p>\n' +
-		'</div>'
+	                             '<div class="mihdan_infinite_scroll_status">\n' +
+	                             '  <div class="loader-ellips infinite-scroll-request">\n' +
+	                             '    <span class="loader-ellips__dot"></span>\n' +
+	                             '    <span class="loader-ellips__dot"></span>\n' +
+	                             '    <span class="loader-ellips__dot"></span>\n' +
+	                             '    <span class="loader-ellips__dot"></span>\n' +
+	                             '  </div>\n' +
+	                             //'  <p class="infinite-scroll-last">End of content</p>\n' +
+	                             '  <p class="infinite-scroll-error">Больше нет страниц для загрузки</p>\n' +
+	                             '</div>'
 	);
 
 	// Инициализация Infinite Scroll
