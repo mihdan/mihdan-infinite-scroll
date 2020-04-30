@@ -7,8 +7,8 @@ WordPress-плагин, реализующий бесконечную подгр
 add_filter(
     'mihdan_infinite_scroll_config',
     function( $config ) { 
-        $config['container'] => '.articles',
-        $config['append']    => '.article',
+        $config['container'] = '.articles',
+        $config['append']    = '.article',
 
         return $config;
     }
