@@ -1,5 +1,8 @@
-# mihdan-infinite-scroll
-WordPress-плагин, реализующий бесконечную подгрузку постов на сингл-страницах 
+# Mihdan: Infinite Scroll
+
+Плагин под WordPress, реализующий бесконечную подгрузку записей (постов) на одиночных(single) страницах.
+
+> Плагине не работает на архивных (archive) страницах!
 
 ## Конфигурация
 
@@ -25,3 +28,15 @@ $( '.articles' ).on(
 	}
 );
 ```
+
+### Список возможных событий
+
+* `scrollThreshold.infiniteScroll`
+* `request.infiniteScroll`
+* `load.infiniteScroll`
+* `append.infiniteScroll`
+* `error.infiniteScroll`
+* `last.infiniteScroll`
+* `history.infiniteScroll`
+
+Более подробную информацию по событиями можно посмотреть на [официальном сайте](https://infinite-scroll.com/events.html#infinite-scroll-events) библиотеки Infinite Scroll.
